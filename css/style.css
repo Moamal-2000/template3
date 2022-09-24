@@ -1,0 +1,341 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffd900;
+  --section-color: #eff7fa;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  border-color: var(--red-color);
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.main-btn:hover {
+  background-color: #de2541 !important;
+  color: white !important;
+}
+
+.main-title::before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  height: 2px;
+  background-color: var(--green-color);
+  bottom: -20px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+/*! Navbar [Start] */
+
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+
+.navbar .search i {
+  color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border: 2px solid white;
+  user-select: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+  box-shadow:
+    0 0 5px var(--green-color),
+    0 0 20px var(--green-color),
+    0 0 30px var(--green-color),
+    inset 0 0 5px var(--green-color);
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] i {
+  color: var(--green-color);
+}
+
+/*! Navbar [End] */
+
+/*? Landing [Start] */
+
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 72px);
+}
+
+/*? Landing [End] */
+
+
+/*! Features [Start] */
+
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder i {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+
+/*! Features [End] */
+
+/*? Our Work [Start] */
+
+.our-work {
+  background-color: var(--section-color);
+}
+
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: white;
+}
+
+.our-work ul li {
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+.our-work .box::before {
+  position: absolute;
+  content: attr(data-work);
+  background-color: #33d1cc9a;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+  -webkit-transform: translateX(calc(-100% - 5px));
+  -moz-transform: translateX(calc(-100% - 5px));
+  -ms-transform: translateX(calc(-100% - 5px));
+  -o-transform: translateX(calc(-100% - 5px));
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+/*? Our Work [End] */
+
+/*! Stuff [Start] */
+
+.stuff .description {
+  max-width: 500px;
+}
+
+.stuff .row .image {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+@media (min-width: 1400px) {
+  .stuff .row:hover .image {
+    transform: translateX(170px);
+    -webkit-transform: translateX(170px);
+    -moz-transform: translateX(170px);
+    -ms-transform: translateX(170px);
+    -o-transform: translateX(170px);
+  }
+}
+
+/*! Stuff [End] */
+
+/*? Our Team [Start] */
+
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow-color);
+}
+
+.team .box h4 {
+  background-color: var(--dark-color);
+}
+
+/*? Our Team [End] */
+
+/*! Project [Start] */
+
+.project {
+  background-color: var(--dark-color);
+}
+
+/*! Project [End] */
+
+/*? Blog [Start] */
+
+@media (max-width: 767px) {
+  .blog .card {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog .card-body h5 {
+    font-size: 16px;
+  }
+}
+
+/*? Blog [End] */
+
+/*! Subscribe [Start] */
+
+.subscribe {
+  background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+
+.subscribe ::placeholder {
+  color: white;
+}
+
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+
+/*! Subscribe [End] */
+
+/*? Footer [Start] */
+
+footer {
+  background-color: var(--dark-color);
+}
+
+footer .copyright a {
+  color: var(--green-color);
+}
+
+footer .copyright div span {
+  color: var(--yellow-color);
+}
+
+footer .contact ul li a i {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+footer .contact ul .facebook {
+  color: #1877f2;
+}
+
+footer .contact ul .facebook::before {
+  z-index: 100 !important;
+}
+
+footer .contact ul .twitter {
+  color: #1da1f2;
+}
+
+footer .contact ul .linkedin {
+  color: #0077b5;
+}
+
+footer .contact ul .youtube {
+  color: #ff0000;
+}
+
+footer .contact ul .facebook:hover,
+footer .contact ul .twitter:hover,
+footer .contact ul .linkedin:hover,
+footer .contact ul .youtube:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/*? Footer [End] */
